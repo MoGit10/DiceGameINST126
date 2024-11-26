@@ -43,15 +43,15 @@ while not game_over:
         #This is to ask the player if they want to re-roll
         while True:
             #This is to find fixed dice
-            fixed = []
+            fixed_frozen = []
             for char in dice: 
                 if dice.count(char) == 2:
-                    fixed.append(char)
+                    fixed_frozen.append(char)
             
             #This is to find unfixed dice
             unfixed = []
             for char in dice: 
-                if char not in fixed:
+                if char not in fixed_frozen:
                     unfixed.append(char)
 
             #This is to stop if there are no unfixed dice
@@ -59,13 +59,13 @@ while not game_over:
                 break
 
             #This will ask if the player wants to re-roll
-            choice = input(f"Fixed dice: {fixed}. Unfixed dice: {unfixed}. Do you want to roll again? (y/n): ").lower()
+            choice = input(f"Fixed dice: {fixed_frozen}. Unfixed dice: {unfixed}. Do you want to roll again? (y/n): ").lower()
             if choice != 'y':
                 break
 
             #This is for re roll unfixed dice
             for char in range(len(dice)): 
-                if dice[char] not in fixed:
+                if dice[char] not in fixed_frozen:
                     dice[char] = random.randint(1, 6)
             
             print(f"You rolled: {dice}")
