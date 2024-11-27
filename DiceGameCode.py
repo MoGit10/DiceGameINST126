@@ -88,4 +88,4 @@ while not game_over:
             break
 
 
-print("\nThanks for playing! Game over!")
+print("\nThanks for playing! Game over!") 
