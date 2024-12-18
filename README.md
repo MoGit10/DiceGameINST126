@@ -35,4 +35,9 @@ If all three dice show the same number, the player "tuples out." The turn ends, 
 
 - When a player stops rolling, their dice are added to their score. Scores are shown after each turn. The first player to reach 50 points wins, and the game ends with a "Game Over" message and a thank you for playing.
 
+## Added Features 
+- Single-player Mode, If only one player is playing, they aim to get the highest score possible.
+- I imported time and used it so, the game uses small pauses to make rolling dice and showing messages feel more natural.
+- Scoreboard, Scores are displayed in a table using Pandas at the end.
+
 
