@@ -43,7 +43,7 @@ winning_score = 50
 def roll_dice():
     return [random.randint(1, 6), random.randint(1, 6), random.randint(1, 6)]
 
-#This is a loop where game_over is set to False because the game is not over yet
+# This is the main game loop, it continues until a player wins or the game ends.
 game_over = False
 while not game_over:
     for player in player_names:
