@@ -41,5 +41,5 @@ If all three dice show the same number, the player "tuples out." The turn ends, 
 ## Updated 
 - Using import time : The game now has small pauses with time.sleep() to make it smoother and less rushed.
 - Using import sys : The game now uses sys.exit() to close the program properly when it's over.
-- Using import panadas : The game now shows the final scores in a table using Pandas at the end.
+- Using import pandas : The game now shows the final scores in a table using Pandas at the end.
 
