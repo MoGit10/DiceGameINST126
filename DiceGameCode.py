@@ -1,5 +1,6 @@
 import random
 import time 
+import sys
 
 print("Welcome to the 'Tuple Out' Dice Game!")
 print("Try to get the highest score without 'tupling out' (rolling three of the same number).")
@@ -109,3 +110,5 @@ while not game_over:
 
 
 print("\nThanks for playing! Game over!") 
+time.sleep(0.5)
+sys.exit()
