@@ -22,6 +22,11 @@ for char in range(num_players):
     name = input(f"Enter the name of player {char + 1}: ")
     player_names.append(name)
 
+# If there is only 1 player, this will tell them the new rule, which is to get the highest point possible.
+if num_players == 1:
+    print("\nYou are playing alone, The goal now is to reach the highest score possible!")
+    
+
 #This is a set up for player scores
 scores = {}
 for name in player_names:
