@@ -1,6 +1,7 @@
 import random
 import time 
 import sys
+import pandas as pd
 
 print("Welcome to the 'Tuple Out' Dice Game!")
 print("Try to get the highest score without 'tupling out' (rolling three of the same number).")
@@ -108,7 +109,13 @@ while not game_over:
             game_over = True
             break
 
+#Here I am using pandas to display the score bored 
+print("\Final scores: ")
+time.sleep(0.5)
+scores_df = pd.DataFrame(scores.items(), columns=["Player", "Score"])
+print(scores_df)
 
+#This is for exit 
 print("\nThanks for playing! Game over!") 
 time.sleep(0.5)
 sys.exit()
