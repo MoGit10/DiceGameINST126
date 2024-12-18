@@ -39,7 +39,7 @@ for name in player_names:
 #How many points someone needs to win game 
 winning_score = 50
 
-#This I am using random function to roll dice
+#Here I am using random function to roll dice
 def roll_dice():
     return [random.randint(1, 6), random.randint(1, 6), random.randint(1, 6)]
 
