@@ -40,4 +40,8 @@ If all three dice show the same number, the player "tuples out." The turn ends, 
 - I imported time and used it so, the game uses small pauses to make rolling dice and showing messages feel more natural.
 - Scoreboard, Scores are displayed in a table using Pandas at the end.
 
+## Updated 
+- Using import time : The game now has small pauses with time.sleep() to make it smoother and less rushed.
+- Using import sys : The game now uses sys.exit() to close the program properly when it's over.
+- Using import panadas : The game now shows the final scores in a table using Pandas at the end.
 
