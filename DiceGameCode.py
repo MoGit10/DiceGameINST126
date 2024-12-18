@@ -118,4 +118,4 @@ print(scores_df)
 #This is for exit 
 print("\nThanks for playing! Game over!") 
 time.sleep(0.5)
-sys.exit()
+sys.exit() 
