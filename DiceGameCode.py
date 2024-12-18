@@ -1,4 +1,5 @@
 import random
+import time 
 
 print("Welcome to the 'Tuple Out' Dice Game!")
 print("Try to get the highest score without 'tupling out' (rolling three of the same number).")
@@ -25,6 +26,7 @@ for char in range(num_players):
 # If there is only 1 player, this will tell them the new rule, which is to get the highest point possible.
 if num_players == 1:
     print("\nYou are playing alone, The goal now is to reach the highest score possible!")
+    time.sleep(1)
     
 
 #This is a set up for player scores
@@ -44,13 +46,16 @@ game_over = False
 while not game_over:
     for player in player_names:
         print(f"\n{player}'s turn!")
+        time.sleep(0.5)
         
         dice = roll_dice()
         print(f"You rolled: {dice}")
+        time.sleep(0.5)
         
         #Check if all dice are the same
         if dice[0] == dice[1] == dice[2]:
             print("You 'tupled out' and got 0 points this turn.")
+            time.sleep(0.5)
             continue
         
         #This is to ask the player if they want to re-roll
@@ -82,10 +87,12 @@ while not game_over:
                     dice[char] = random.randint(1, 6)
             
             print(f"You rolled: {dice}")
+            time.sleep(0.5)
             
             #In here we check if player has tupled out
             if dice[0] == dice[1] == dice[2]:
                 print("You 'tupled out' and got 0 points this turn.")
+                time.sleep(0.5)
                 break
 
         #This adds up the points if the player didn't tuple out
