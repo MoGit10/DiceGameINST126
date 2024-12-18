@@ -32,9 +32,9 @@ if num_players == 1:
     
 
 #This is a set up for player scores
-scores = {}
+player_scores = {}
 for name in player_names:
-    scores[name] = 0
+    player_scores[name] = 0
 
 #How many points someone needs to win game 
 winning_score = 50
@@ -100,19 +100,19 @@ while not game_over:
         #This adds up the points if the player didn't tuple out
         if dice[0] != dice[1] or dice[1] != dice[2]:
             points = sum(dice)
-            scores[player] += points
-            print(f"{player} earned {points} points this turn. Total score: {scores[player]}")
+            player_scores[player] += points
+            print(f"{player} earned {points} points this turn. Total score: {player_scores[player]}")
         
         #This will check if the current player has reached the target score to win the game.
-        if scores[player] >= winning_score:
-            print(f"\nCongratulations, {player}! You win with {scores[player]} points!")
+        if player_scores[player] >= winning_score:
+            print(f"\nCongratulations, {player}! You win with {player_scores[player]} points!")
             game_over = True
             break
 
 # Here I am using pandas to display the scoreboard 
 print("\nFinal scores: ")
 time.sleep(0.5)
-scores_df = pd.DataFrame(scores.items(), columns=["Player", "Score"])
+scores_df = pd.DataFrame(player_scores.items(), columns=["Player", "Score"])
 print(scores_df)
 
 # This is for exit 
