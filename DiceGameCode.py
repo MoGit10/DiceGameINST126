@@ -8,7 +8,7 @@ print("Try to get the highest score without 'tupling out' (rolling three of the 
 print("If two dice match, they stay fixed, and you can re-roll the rest.")
 print("First player to reach 50 points wins the game!")
 
-# This will get how many players are playing and to tell you need atleast 1 player 
+#This will get how many players are playing and ensure there is at least 1 player
 while True:
     try:
         num_players = int(input("How many players are playing? "))
@@ -19,13 +19,13 @@ while True:
     except ValueError:
         print("Please enter a valid number")
 
-#Here we will get the name of the player or players 
+# Here we will get the name of the player or players 
 player_names = []
 for char in range(num_players): 
     name = input(f"Enter the name of player {char + 1}: ")
     player_names.append(name)
 
-# If there is only 1 player, this will tell them the new rule, which is to get the highest point possible.
+# If there is only 1 player, explain the new rule to get the highest score possible
 if num_players == 1:
     print("\nYou are playing alone, The goal now is to reach the highest score possible!")
     time.sleep(1)
@@ -39,7 +39,7 @@ for name in player_names:
 #How many points someone needs to win game 
 winning_score = 50
 
-#This I am using ramdom function to roll dice
+#This I am using random function to roll dice
 def roll_dice():
     return [random.randint(1, 6), random.randint(1, 6), random.randint(1, 6)]
 
@@ -83,7 +83,7 @@ while not game_over:
             if choice != 'y':
                 break
 
-            #This is for re roll unfixed dice
+            #This is for re roll the unfixed dice
             for char in range(len(dice)): 
                 if dice[char] not in fixed_frozen:
                     dice[char] = random.randint(1, 6)
@@ -103,19 +103,19 @@ while not game_over:
             scores[player] += points
             print(f"{player} earned {points} points this turn. Total score: {scores[player]}")
         
-        #This will check which player ends up winning
+        #This will check if the current player has reached the target score to win the game.
         if scores[player] >= winning_score:
             print(f"\nCongratulations, {player}! You win with {scores[player]} points!")
             game_over = True
             break
 
-#Here I am using pandas to display the score bored 
+# Here I am using pandas to display the scoreboard 
 print("\nFinal scores: ")
 time.sleep(0.5)
 scores_df = pd.DataFrame(scores.items(), columns=["Player", "Score"])
 print(scores_df)
 
-#This is for exit 
+# This is for exit 
 print("\nThanks for playing! Game over!") 
 time.sleep(0.5)
 sys.exit() 
