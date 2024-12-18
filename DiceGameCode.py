@@ -110,7 +110,7 @@ while not game_over:
             break
 
 #Here I am using pandas to display the score bored 
-print("\Final scores: ")
+print("\nFinal scores: ")
 time.sleep(0.5)
 scores_df = pd.DataFrame(scores.items(), columns=["Player", "Score"])
 print(scores_df)
