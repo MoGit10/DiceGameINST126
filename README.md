@@ -39,7 +39,7 @@ If all three dice show the same number, the player "tuples out." The turn ends, 
 - Single-player Mode, if only one player is playing, they aim to get the highest score possible instead of competing against others.
 
 ## Updated 
-- Using import time : The game now has small pauses with time.sleep() to make it smoother and less rushed.
+- Using import time : The game now uses time.sleep() to control pacing and build anticipation, adding suspense during dice rolls and score updates. This makes the game smoother and also more engaging.
 - Using import sys : The game now uses sys.exit() to close the program properly when it's over.
 - Using import pandas : The game now shows the final scores in a table using Pandas at the end.
 
