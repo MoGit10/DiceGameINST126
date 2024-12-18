@@ -5,8 +5,16 @@ print("Try to get the highest score without 'tupling out' (rolling three of the 
 print("If two dice match, they stay fixed, and you can re-roll the rest.")
 print("First player to reach 50 points wins the game!")
 
-# This will get how many players are playing 
-num_players = int(input("How many players are playing? "))
+# This will get how many players are playing and to tell you need atleast 1 player 
+while True:
+    try:
+        num_players = int(input("How many players are playing? "))
+        if num_players < 1:
+            print("You need atleast 1 player to play the game!")
+        else: 
+            break
+    except ValueError:
+        print("Please enter a valid number")
 
 #Here we will get the name of the player or players 
 player_names = []
